@@ -5,9 +5,9 @@ public void setup()
 }
 public void draw()
 {
-  sierpinski(100,1000,mouseX);
+  Fractal(100,1000,mouseX);
 }
-public void sierpinski(int x, int y, int len) 
+public void Fractal(int x, int y, int len) 
 {
    if(len <= 20)
    {
@@ -17,8 +17,8 @@ public void sierpinski(int x, int y, int len)
    else
    {
      stroke(color(random(250),random(250),random(250)));
-     sierpinski(x,y,len/2);
-     sierpinski(x+len/2,y,len/2);
-     sierpinski(x+len/4, y-len/2, len/2);
+     Fractal(x,y,len/2);
+     Fractal(x+len/2,y,len/2);
+     Fractal(x+len/4, y-len/2, len/2);
    }
 }
